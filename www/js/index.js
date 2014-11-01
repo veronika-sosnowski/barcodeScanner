@@ -45,7 +45,7 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
-        phonegap.plugins.barcodescanner.scan(
+        cordova.plugin.BarcodeScanner.scan(
             function (result) {
                 alert("We got a barcode\n" +
                     "Result: " + result.text + "\n" +
