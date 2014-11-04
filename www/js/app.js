@@ -24,7 +24,7 @@ function startScan() {
 function lookup(upc) {
     jQuery.ajax({
         url: "http://api.upcdatabase.org/json/a076fe196e7054a3da2a2d8ac2685187/" + upc
-    }).done(function (result) { displayresult(result.itemname);});
+    }).done(function (result) { displayresult(result.itemname + "<br>" + result.description);});
 }
 function displayresult(result) {
     resultDiv = document.querySelector("#results");
