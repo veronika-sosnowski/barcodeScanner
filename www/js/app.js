@@ -11,7 +11,7 @@ function startScan() {
 
     cordova.plugins.barcodeScanner.scan(
 		function (result) {
-		    lookup(result.text);
+		    lookup("0" + result.text);
 		    displayresult(result.text);
 		},
 		function (error) {
